@@ -1,0 +1,11 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double h, H;
+    cout<<"Введите точку высоты над Землей h: ";
+    cin>>h;
+    H=sqrt(pow((6350+h), 2)-pow(6350, 2));
+    cout<<"Расстояние до линии горизонта = "<<H<<endl;
+    return 0;
+}
