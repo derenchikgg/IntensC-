@@ -2,7 +2,7 @@
 #include <cmath>
 using namespace std;
 int main(){
-    float a, b, x, y;
+    double a, b, x, y;
     cout<<"Введите a: ";
     cin>>a;
     cout<<"Введите b: ";
