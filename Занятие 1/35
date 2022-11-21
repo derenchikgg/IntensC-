@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double a, b, c, v, s;
+    cout<<"Введите число a: ";
+    cin>>a;
+    cout<<"Введите число b: ";
+    cin>>b;
+    cout<<"Введите число c: ";
+    cin>>c;
+    v=a*b*c;
+    s=2*c*(a+b);
+    cout<<"Объем = "<<v<<endl;
+    cout<<"Площадь боковой поверхности = "<<s<<endl;
+    return 0;
+}
