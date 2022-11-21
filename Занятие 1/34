@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double a, b, s, r, p, d;
+    cout<<"Введите число a: ";
+    cin>>a;
+    cout<<"Введите число b: ";
+    cin>>b;
+    s=a+b;
+    r=a-b;
+    p=a*b;
+    d=a/b;
+    cout<<"Сумма = "<<s<<endl;
+    cout<<"Разность = "<<r<<endl;
+    cout<<"Произведение = "<<p<<endl;
+    cout<<"Частное = "<<d<<endl;
+    return 0;
+}
