@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int a, x;
+    cout<<"Введите a: ";
+    cin >> a;
+    x = 12 * a * a + 7 * a - 16;
+    cout << "x = " << x << endl;
+    return 0;
+}
