@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double a, b, c;
+    cout<<"Введите a: ";
+    cin>>a;
+    cout<<"Введите b: ";
+    cin>>b;
+    cout<<"Введите c: ";
+    cin>>c;
+    swap(a, b);
+    swap(b, c);
+    swap(c, a);
+    cout<<"a = "<<c<<endl;
+    cout<<"b = "<<b<<endl;
+    cout<<"c = "<<a<<endl;
+    return 0;
+}
