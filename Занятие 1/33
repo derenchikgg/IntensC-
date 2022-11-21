@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double a, b, p, d;
+    cout<<"Введите длину стороны прямоугольника a: ";
+    cin>>a;
+    cout<<"Введите длину стороны прямоугольника b: ";
+    cin>>b;
+    p=(2*a)+(2*b);
+    d=sqrt(pow(a, 2)+pow(b, 2));
+    cout<<"Периметр = "<<p<<endl;
+    cout<<"Диагональ = "<<d<<endl;
+    return 0;
+}
