@@ -4,8 +4,8 @@ using namespace std;
 int main(){
     int x, y;
     cout<<"Введите x: ";
-    cin >> x;
-    y = 7 * pow(x, 2) - 3 * x + 6;
-    cout << "y = " << y << endl;
+    cin>>x;
+    y=7*pow(x, 2)-3*x+6;
+    cout<<"y = "<<y<<endl;
     return 0;
 }
