@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    float a, b, x, y;
+    cout<<"Введите a: ";
+    cin>>a;
+    cout<<"Введите b: ";
+    cin>>b;
+    x=(abs(x)+abs(y))/2;
+    y=sqrt(abs(x)*abs(y));
+    cout<<"Среднее арифметическое = "<<x<<endl;
+    cout<<"Среднее геометрическое = "<<y<<endl;
+    return 0;
+}
