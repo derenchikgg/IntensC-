@@ -1,0 +1,11 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    int r, d;
+    cout<<"Введите радиус окружности r: ";
+    cin>>r;
+    d=2*r;
+    cout<<"Диаметр окружности = "<<d<<endl;
+    return 0;
+}
