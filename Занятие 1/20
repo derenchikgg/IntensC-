@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double r, c, s;
+    cout<<"Введите радиус окружности r: ";
+    cin>>r;
+    c=2*3.14*r;
+    s=3.14*pow(r, 2);
+    cout<<"Длина окружности = "<<c<<endl;
+    cout<<"Площадь круга = "<<s<<endl;
+    return 0;
+}
