@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double a, v, s;
+    cout<<"Введите длину ребра куба a: ";
+    cin>>a;
+    v=pow(a, 3);
+    s=4*pow(a, 2);
+    cout<<"Объем = "<<v<<endl;
+    cout<<"Площадь боковой поверхности = "<<s<<endl;
+    return 0;
+}
