@@ -1,0 +1,11 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    int a, y;
+    cout<<"Введите a: ";
+    cin >> a;
+    y = (pow(a, 2) + 1) * sqrt(pow(a, 2) + 1);
+    cout << "y = " << y << endl;
+    return 0;
+}
