@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double p, s, q;
+    cout<<"Введите количество человек p: ";
+    cin>>p;
+    cout<<"Введите площадь территории s: ";
+    cin>>s;
+    q=p/s;
+    cout<<"Плотность = "<<q<<endl;
+    return 0;
+}
