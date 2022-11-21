@@ -1,10 +1,11 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 int main(){
     int x, y;
     cout<<"Введите x: ";
     cin >> x;
-    y = 7 * x * x - 3 * x + 6;
+    y = 7 * pow(x, 2) - 3 * x + 6;
     cout << "y = " << y << endl;
     return 0;
 }
