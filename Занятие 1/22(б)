@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double a, b, x;
+    cout<<"Введите a: ";
+    cin>>a;
+    cout<<"Введите b: ";
+    cin>>b;
+    x=sqrt(a*b);
+    cout<<"Среднее геометрическое = "<<x<<endl;
+    return 0;
+}
