@@ -1,0 +1,11 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double x, y;
+    cout<<"Введите x: ";
+    cin>>x;
+    y=sin((3,2+sqrt(1+x))/abs(5*x));
+    cout<<"y = "<<y<<endl;
+    return 0;
+}
