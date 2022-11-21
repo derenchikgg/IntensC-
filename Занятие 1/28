@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double a, b, c, p;
+    cout<<"Введите катет a: ";
+    cin>>a;
+    cout<<"Введите катет b: ";
+    cin>>b;
+    c=sqrt(pow(a, 2)+pow(b, 2));
+    p=a+b+c;
+    cout<<"Периметр = "<<p<<endl;
+    return 0;
+}
