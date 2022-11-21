@@ -1,0 +1,11 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double a, x;
+    cout<<"Введите a: ";
+    cin>>a;
+    x=sqrt((2*a+sin(abs(3*a)))/(3,56));
+    cout<<"x = "<<x<<endl;
+    return 0;
+}
