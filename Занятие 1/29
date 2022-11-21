@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double a, b, c, h, g, p;
+    cout<<"Введите первое основание трапеции a: ";
+    cin>>a;
+    cout<<"Введите второе основание трапеции b: ";
+    cin>>b;
+    cout<<"Введите высоту h: ";
+    cin>>h;
+    g=abs(a-b)/2;
+    c=sqrt(pow(h, 2)+pow(g, 2));
+    p=a+b+(2*c);
+    cout<<"Периметр = "<<p<<endl;
+    return 0;
+}
