@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double a, b, g, s;
+    cout<<"Введите большее основание трапеции a: ";
+    cin>>a;
+    cout<<"Введите меньшее основание трапеции b: ";
+    cin>>b;
+    cout<<"Введите угол при большем основании трапеции g: ";
+    cin>>g;
+    s=((pow(a, 2)-pow(b, 2))/2)*tan(g);
+    cout<<"Площадь = "<<s<<endl;
+    return 0;
+}
