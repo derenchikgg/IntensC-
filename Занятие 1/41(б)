@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double a, b, c, d;
+    cout<<"Введите a: ";
+    cin>>a;
+    b=a*a;
+    c=b*b;
+    d=c*b;
+    cout<<"a^6 = "<<d<<endl;
+    return 0;
+}
