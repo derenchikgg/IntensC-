@@ -10,5 +10,5 @@ int main(){
     if(a==0)
         cout<<"Нет решения";
     else
-        cout<<"x="<<-b/a;
+        cout<<"x = "<<-b/a;
 }
