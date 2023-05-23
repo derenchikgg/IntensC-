@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 10;
+    float sum_wheat = 0, sum_yield = 0;
+
+    for (int i = 1; i <= n; i++) {
+        float area, yield;
+        cout << "Введите площадь района " << i << " засеянную пшеницей (в гектарах): ";
+        cin >> area;
+        cout << "Введите среднюю урожайность пшеницы в районе " << i << " (в центнерах с гектара): ";
+        cin >> yield;
+        sum_wheat += area;
+        sum_yield += yield;
+    }
+
+    float overall_yield = sum_yield/n;
+    float overall_wheat = sum_wheat;
+    cout << "Средняя урожайность пшеницы в области: " << overall_yield << " ц/га" << endl;
+    cout << "Количество пшеницы, собранное в области: " << overall_wheat << " га" << endl;
+
+    return 0;
+}
