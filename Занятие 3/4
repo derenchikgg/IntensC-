@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float exchangeRate;
+    cout << "Введите курс доллара: ";
+    cin >> exchangeRate;
+
+    for (int i = 1; i <= 20; i++) {
+        float rubles = i * exchangeRate;
+        cout << i << " долларов = " << rubles << " рублей" << endl;
+    }
+
+    return 0;
+}
