@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+float resistance(float r1, float r2, char type) {
+    if (type == 's') {
+        return r1 + r2;
+    } else if (type == 'p') {
+        return (r1 * r2) / (r1 + r2);
+    } else {
+        return -1;
+    }
+}
+
+int main() {
+    float r1 = 100.0;
+    float r2 = 200.0;
+    char type = 'p';
+    float r = resistance(r1, r2, type);
+    if (r == -1) {
+        cout << "Неверно указан тип соединения" << endl;
+    } else {
+        cout << "Сопротивление цепи: " << r << endl;
+    }
+    return 0;
+}
