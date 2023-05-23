@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int unit;
+    float mass;
+    cout << "Введите номер единицы массы (1-5): ";
+    cin >> unit;
+    cout << "Введите массу тела: ";
+    cin >> mass;
+
+    float result;
+    switch (unit) {
+        case 1:
+            result = mass;
+            break;
+        case 2:
+            result = mass / 1000000;
+            break;
+        case 3:
+            result = mass / 1000;
+            break;
+        case 4:
+            result = mass * 1000;
+            break;
+        case 5:
+            result = mass * 100;
+            break;
+        default:
+            cout << "Ошибка: неверный номер единицы массы";
+            return 1;
+    }
+
+    cout << "Масса тела в килограммах: " << result;
+
+    return 0;
+}
