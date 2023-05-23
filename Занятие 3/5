@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    const int radius = 6350;
+
+    for (int i = 1; i <= 10; i += 9) {
+        int height = i * 1000;
+        float distance = sqrt(pow(radius + height, 2) - pow(radius, 2));
+        cout << "Высота: " << i << " км, расстояние до линии горизонта: " << distance << " км" << endl;
+    }
+
+    return 0;
+}
