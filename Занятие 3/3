@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const float inchToCm = 2.54;
+
+    for (int i = 10; i <= 22; i++) {
+        float cm = i * inchToCm;
+        cout << i << " дюйм = " << cm << " см" << endl;
+    }
+
+    return 0;
+}
