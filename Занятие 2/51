@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int age;
+    cout << "Введите возраст (20-69): ";
+    cin >> age;
+
+    string ageString;
+    if (age < 20 || age > 69) {
+        cout << "Ошибка: неверный возраст";
+        return 1;
+    } else if (age % 10 == 0) {
+        switch (age) {
+            case 20:
+                ageString = "двадцать лет";
+                break;
+            case 30:
+                ageString = "тридцать лет";
+                break;
+            case 40:
+                ageString = "сорок лет";
+                break;
+            case 50:
+                ageString = "пятьдесят лет";
+                break;
+            case 60:
+                ageString = "шестьдесят лет";
+                break;
+        }
+    } else {
+        string prefix, suffix;
+        switch (age / 10) {
+            case 2:
+                prefix = "двадцать";
+                break;
+            case 3:
+                prefix = "тридцать";
+                break;
+            case 4:
+                prefix = "сорок";
+                break;
+            case 5:
+                prefix = "пятьдесят";
+                break;
+            case 6:
+                prefix = "шестьдесят";
+                break;
+        }
+        switch (age % 10) {
+            case 1:
+                suffix = "один год";
+                break;
+            case 2:
+                suffix = "два года";
+                break;
+            case 3:
+                suffix = "три года";
+                break;
+            case 4:
+                suffix = "четыре года";
+                break;
+            case 5:
+                suffix = "пять лет";
+                break;
+            case 6:
+                suffix = "шесть лет";
+                break;
+            case 7:
+                suffix = "семь лет";
+                break;
+            case 8:
+                suffix = "восемь лет";
+                break;
+            case 9:
+                suffix = "девять лет";
+                break;
+        }
+        ageString = prefix + " " + suffix;
+    }
+
+    cout << "Возраст: " << ageString;
+
+    return 0;
+}
