@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, total_mass = 0;
+    cout << "Введите количество предметов: ";
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        int mass;
+        cout << "Введите массу предмета №" << i+1 << ": ";
+        cin >> mass;
+        total_mass += mass;
+    }
+
+    cout << "Общая масса груза: " << total_mass << endl;
+
+    return 0;
+}
