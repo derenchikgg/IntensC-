@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 2, m = 5; // n - количество классов, m - количество учеников в каждом классе
+    float sum1 = 0, sum2 = 0;
+
+    for (int i = 1; i <= n; i++) {
+        float sum = 0;
+        for (int j = 1; j <= m; j++) {
+            float height;
+            cout << "Введите рост ученика класса " << i << " №" << j << ": ";
+            cin >> height;
+            sum += height;
+        }
+        float average = sum/m;
+        cout << "Средний рост учеников класса " << i << ": " << average << endl;
+        if (i == 1) {
+            sum1 += sum;
+        } else {
+            sum2 += sum;
+        }
+    }
+
+    float overall_avg = (sum1 + sum2)/(n*m);
+    cout << "Средний рост учеников по обоим классам: " << overall_avg << endl;
+
+    return 0;
+}
