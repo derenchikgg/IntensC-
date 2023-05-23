@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A[3][4] = {{1,2,3,4},
+                   {5,6,7,8},
+                   {9,10,11,12}};
+    int min1 = A[0][0], min3 = A[2][0];
+    int idxMin1 = 0, idxMin3 = 2;
+    for (int i = 1; i < 4; i++) {
+        if (A[0][i] < min1) {
+            min1 = A[0][i];
+            idxMin1 = i;
+        }
+        if (A[2][i] < min3) {
+            min3 = A[2][i];
+            idxMin3 = i;
+        }
+    }
+    swap(A[0][idxMin1], A[2][idxMin3]);
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 4; j++) {
+            cout << A[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
