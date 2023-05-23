@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int k;
+    cout << "Введите число от 1 до 5: ";
+    cin >> k;
+
+    switch (k) {
+        case 1:
+            cout << "Плохо";
+            break;
+        case 2:
+            cout << "Неудовлетворительно";
+            break;
+        case 3:
+            cout << "Удовлетворительно";
+            break;
+        case 4:
+            cout << "Хорошо";
+            break;
+        case 5:
+            cout << "Отлично";
+            break;
+        default:
+            cout << "Ошибка: число не лежит в диапазоне 1-5";
+    }
+
+    return 0;
+}
