@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 19;
+    int arr[size];
+    int max_value = arr[0];
+
+    for (int i = 0; i < size; i++) {
+        cout << "Введите элемент массива: ";
+        cin >> arr[i];
+        if (arr[i] > max_value) {
+            max_value = arr[i];
+        }
+    }
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i] % 2 == 0) {
+            arr[i] = max_value;
+        }
+    }
+
+    cout << "Новый массив: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
