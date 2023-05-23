@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 15;
+    int arr[size];
+    int negative_count = 0;
+    int zero_count = 0;
+    int pos_product = 1;
+
+    for (int i = 0; i < size; i++) {
+        cout << "Введите элемент массива: ";
+        cin >> arr[i];
+        if (arr[i] < 0) {
+            negative_count++;
+        } else if (arr[i] == 0) {
+            zero_count++;
+        } else {
+            pos_product *= arr[i];
+        }
+    }
+
+    cout << "Количество отрицательных элементов: " << negative_count << endl;
+    cout << "Количество нулевых элементов: " << zero_count << endl;
+    cout << "Произведение положительных элементов: " << pos_product << endl;
+
+    return 0;
+}
