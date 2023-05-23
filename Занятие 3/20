@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float average = 0;
+
+    for (int i = 1; i <= 1000; i++) {
+        average += i;
+    }
+
+    average /= 1000.0;
+
+    cout << "Среднее арифметическое всех целых чисел от 1 до 1000: " << average << endl;
+
+    return 0;
+}
