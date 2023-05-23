@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cout << "Введите размер матрицы N (N <= 10): ";
+    cin >> N;
+    double A[10][10];
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            cout << "Введите элемент A[" << i << "][" << j << "]: ";
+            cin >> A[i][j];
+        }
+    }
+    double min[N];
+    for (int j = 0; j < N; j++) {
+        min[j] = A[0][j];
+        for (int i = 1; i < N; i++) {
+            if (A[i][j] < min[j]) {
+                min[j] = A[i][j];
+            }
+        }
+    }
+    double product = 1;
+    for (int j = 0; j < N; j++) {
+        product *= min[j];
+    }
+    cout << "Произведение наименьших элементов каждого столбца: " << product << endl;
+    return 0;
+}
