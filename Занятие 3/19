@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, product = 1;
+    cout << "Введите значение a: ";
+    cin >> a;
+    cout << "Введите значение b: ";
+    cin >> b;
+
+    for (int i = a; i <= b; i++) {
+        product *= i;
+    }
+
+    cout << "Произведение всех целых чисел от " << a << " до " << b << ": " << product << endl;
+
+    return 0;
+}
