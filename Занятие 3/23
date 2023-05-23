@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, total_resistance = 0;
+    cout << "Введите количество элементов цепи: ";
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        int resistance;
+        cout << "Введите сопротивление элемента №" << i+1 << ": ";
+        cin >> resistance;
+        total_resistance += resistance;
+    }
+
+    cout << "Общее сопротивление цепи: " << total_resistance << endl;
+
+    return 0;
+}
