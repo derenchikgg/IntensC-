@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+const int N = 3;
+
+int main() {
+    int A[N][N] = {{1,2,3},
+                   {2,4,5},
+                   {3,6,7}};
+    bool asymmetric = false;
+    for (int i = 0; i < N; i++) {
+        for (int j = i+1; j < N; j++) {
+            if (A[i][j] != A[j][i]) {
+                asymmetric = true;
+                break;
+            }
+        }
+        if (asymmetric) {
+            break;
+        }
+    }
+    if (asymmetric) {
+        cout << "Массив не симметричен относительно своей главной диагонали" << endl;
+    } else {
+        cout << "Массив симметричен относительно своей главной диагонали" << endl;
+    }
+    return 0;
+}
