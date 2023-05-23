@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int product = 1;
+
+    for (int i = 8; i <= 15; i++) {
+        product *= i;
+    }
+
+    cout << "Произведение всех целых чисел от 8 до 15: " << product << endl;
+
+    return 0;
+}
