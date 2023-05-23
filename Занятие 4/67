@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+const int N = 3;
+
+int main() {
+    int A[N][N] = {{1,2,3},
+                   {4,5,6},
+                   {7,8,9}};
+    int minCount = N;
+    int minIndex = -1;
+    for (int j = 0; j < N; j++) {
+        int count = 0;
+        for (int i = 0; i < N; i++) {
+            if (A[i][j] % (i+j) == 0) {
+                count++;
+            }
+        }
+        if (count < minCount) {
+            minCount = count;
+            minIndex = j;
+        }
+    }
+    cout << "Столбец с минимальным количеством элементов, кратных сумме индексов: " << minIndex << endl;
+    return 0;
+}
