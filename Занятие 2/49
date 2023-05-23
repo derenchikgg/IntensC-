@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int day, month;
+    cout << "Введите день и месяц: ";
+    cin >> day >> month;
+
+    switch (month) {
+        case 2:
+            if (day == 28) {
+                day = 1;
+                month++;
+            } else {
+                day++;
+            }
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            if (day == 30) {
+                day = 1;
+                month++;
+            } else {
+                day++;
+            }
+            break;
+        default:
+            if (day == 31) {
+                day = 1;
+                month++;
+            } else {
+                day++;
+            }
+    }
+
+    cout << "Следующая дата: " << day << " " << month;
+
+    return 0;
+}
