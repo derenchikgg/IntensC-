@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+float Procent(float number, float percent) {
+    return number * percent / 100.0;
+}
+
+int main() {
+    float n = 100.0;
+    float p = 10.0;
+    float result = Procent(n, p);
+    cout << "Результат: " << result << endl;
+    return 0;
+}
