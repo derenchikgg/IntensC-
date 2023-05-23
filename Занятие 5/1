@@ -1,1 +1,15 @@
+#include <iostream>
+using namespace std;
 
+float cylinderVolume(float radius, float height) {
+    const float pi = 3.14159265359;
+    return pi * radius * radius * height;
+}
+
+int main() {
+    float r = 2.5;
+    float h = 5.0;
+    float v = cylinderVolume(r, h);
+    cout << "Объем цилиндра: " << v << endl;
+    return 0;
+}
