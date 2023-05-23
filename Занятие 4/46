@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 7;
+    int arr[size][size];
+    int sum = 0;
+
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            cout << "Введите элемент массива: ";
+            cin >> arr[i][j];
+            if (arr[i][j] < 0 && arr[i][j] % 2 != 0) {
+                sum += abs(arr[i][j]);
+            }
+        }
+    }
+
+    cout << "Сумма модулей отрицательных нечетных элементов: " << sum << endl;
+
+    return 0;
+}
