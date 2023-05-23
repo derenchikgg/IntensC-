@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int sum = 0;
+
+    for (int i = 1; i <= 20; i++) {
+        int mark;
+        cout << "Введите оценку ученика №" << i << ": ";
+        cin >> mark;
+        sum += mark;
+    }
+
+    float average = float(sum)/20;
+    cout << "Средняя оценка по физике: " << average << endl;
+
+    return 0;
+}
