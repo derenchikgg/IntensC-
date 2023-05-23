@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Введите число: ";
+    cin >> n;
+
+    if (n % 2 == 0 && n >= 10 && n < 100) {
+        cout << "Данное число является четным двузначным";
+    } else {
+        cout << "Данное число не является четным двузначным";
+    }
+
+    return 0;
+}
