@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double power(double a, double b) {
+    return pow(a, b);
+}
+
+int main() {
+    double x = 2.0;
+    double y = 3.0;
+    double result = power(x, y);
+    cout << "Результат возведения в степень: " << result << endl;
+    return 0;
+}
