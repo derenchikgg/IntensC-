@@ -1,0 +1,34 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    const int size = 12;
+    float arr[size];
+    float max_elem = arr[0];
+    float min_elem = arr[0];
+    float sum = 0;
+
+    for (int i = 0; i < size; i++) {
+        cout << "Введите элемент массива: ";
+        cin >> arr[i];
+    }
+
+    sort(arr, arr + size, greater<float>());
+
+    cout << "Отсортированный массив: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+        if (arr[i] > max_elem) {
+            max_elem = arr[i];
+        }
+        if (arr[i] < min_elem) {
+            min_elem = arr[i];
+        }
+    }
+
+    sum = max_elem + min_elem;
+    cout << endl << "Сумма максимального и минимального элементов: " << sum << endl;
+
+    return 0;
+}
