@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 18;
+    float arr[size];
+    float pos_product = 1;
+    float neg_sum = 0;
+
+    for (int i = 0; i < size; i++) {
+        cout << "Введите элемент массива: ";
+        cin >> arr[i];
+        if (arr[i] > 0) {
+            pos_product *= arr[i];
+        } else if (arr[i] < 0) {
+            neg_sum += abs(arr[i]);
+        }
+    }
+
+    float result = 0;
+    if (neg_sum > 0) {
+        result = pos_product / neg_sum;
+    }
+
+    cout << "Частное от деления произведения всех положительных элементов и суммы модулей всех отрицательных: " << result << endl;
+
+    return 0;
+}
