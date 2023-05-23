@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+const int N = 3;
+const int M = 4;
+
+int main() {
+    int A[N][M] = {{-5,2,-3,4},
+                   {5,-6,7,8},
+                   {9,10,-11,12}};
+    int B[N*M];
+    int V;
+    cout << "Введите число V: ";
+    cin >> V;
+    int count = 0;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            if (abs(A[i][j]) > V) {
+                B[count] = A[i][j];
+                count++;
+            }
+        }
+    }
+    cout << "Число элементов, превышающих по абсолютной величине число V: " << count << endl;
+    cout << "Эти элементы: ";
+    for (int i = 0; i < count; i++) {
+        cout << B[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}
