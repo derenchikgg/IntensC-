@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const float poundToKg = 0.453;
+
+    for (int i = 1; i <= 10; i++) {
+        float kg = i * poundToKg;
+        cout << i << " фунт = " << kg << " кг" << endl;
+    }
+
+    return 0;
+}
