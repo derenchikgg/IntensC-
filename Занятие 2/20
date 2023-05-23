@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Введите число: ";
+    cin >> n;
+
+    int a = n / 100; // первая цифра
+    int b = (n / 10) % 10; // вторая цифра
+    int c = n % 10; // третья цифра
+
+    if (a != b && a != c && b != c) {
+        cout << "Все цифры данного числа различны";
+    } else {
+        cout << "Есть повторяющиеся цифры в данном числе";
+    }
+
+    return 0;
+}
