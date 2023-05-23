@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cout << "Введите число A: ";
+    cin >> a;
+    cout << "Введите число B: ";
+    cin >> b;
+    cout << "Введите число C: ";
+    cin >> c;
+
+    if ((a < b && b < c) || (c < b && b < a)) {
+        cout << "Число B находится между числами A и C";
+    } else {
+        cout << "Число B не находится между числами A и C";
+    }
+
+    return 0;
+}
