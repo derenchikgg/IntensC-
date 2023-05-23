@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cout << "Введите число A: ";
+    cin >> a;
+    cout << "Введите число B: ";
+    cin >> b;
+
+    if (a % 2 != 0 || b % 2 != 0) {
+        cout << "Хотя бы одно из чисел А и В нечетное";
+    } else {
+        cout << "Оба числа четные";
+    }
+
+    return 0;
+}
