@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Введите целое число: ";
+    cin >> n;
+
+    if (n > 0) {
+        n += 1;
+    } else {
+        n -= 2;
+    }
+
+    cout << "Результат: " << n;
+
+    return 0;
+}
