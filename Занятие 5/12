@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+const int N = 10;
+
+int findExtreme(int A[], bool isMax) {
+    int extreme = A[0];
+    for (int i = 1; i < N; i++) {
+        if (isMax) {
+            if (A[i] > extreme) {
+                extreme = A[i];
+            }
+        } else {
+            if (A[i] < extreme) {
+                extreme = A[i];
+            }
+        }
+    }
+    return extreme;
+}
+
+int main() {
+    int A[N] = {3, 5, 2, 7, 1, 8, 4, 9, 6, 0};
+    int max = findExtreme(A, true);
+    int min = findExtreme(A, false);
+    cout << "Максимальный элемент: " << max << endl;
+    cout << "Минимальный элемент: " << min << endl;
+    return 0;
+}
