@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+const int N = 4;
+const int M = 5;
+
+int main() {
+    int A[N][M] = {{1,2,3,4,5},
+                   {6,7,8,9,10},
+                   {-1,12,13,14,15},
+                   {16,17,18,19,20}};
+    int min = A[0][0];
+    int idxMin = 0;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            if (A[i][j] < min) {
+                min = A[i][j];
+                idxMin = i;
+            }
+        }
+    }
+    for (int i = N-1; i > idxMin; i--) {
+        for (int j = 0; j < M; j++) {
+            A[i+1][j] = A[i][j];
+        }
+    }
+    for (int j = 0; j < M; j++) {
+        A[idxMin+1][j] = A[0][j];
+    }
+    for (int i = 0; i < N+1; i++) {
+        for (int j = 0; j < M; j++) {
+            cout << A[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
