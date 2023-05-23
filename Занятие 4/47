@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int rows = 5;
+    const int cols = 4;
+    int arr[rows][cols];
+    float pos_sum[cols] = {0};
+    int pos_count[cols] = {0};
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << "Введите элемент массива: ";
+            cin >> arr[i][j];
+            if (arr[i][j] > 0) {
+                pos_sum[j] += arr[i][j];
+                pos_count[j]++;
+            }
+        }
+    }
+
+    cout << "Средние арифметические положительных элементов каждого столбца: " << endl;
+    for (int j = 0; j < cols; j++) {
+        float pos_avg = 0;
+        if (pos_count[j] > 0) {
+            pos_avg = (float)pos_sum[j] / pos_count[j];
+        }
+        cout << "Столбец " << j + 1 << ": " << pos_avg << endl;
+    }
+
+    return 0;
+}
