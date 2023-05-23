@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int sum = 0;
+
+    for (int i = 1; i <= 10; i++) {
+        int a;
+        cout << "Введите число a" << i << ": ";
+        cin >> a;
+        sum += a;
+    }
+
+    float average = float(sum)/10;
+    cout << "Среднее арифметическое всех чисел: " << average << endl;
+
+    return 0;
+}
