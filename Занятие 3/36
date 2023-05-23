@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int ameba = 1;
+    cout << "Через 3 часа будет " << ameba*pow(2,1) << " клеток" << endl;
+    cout << "Через 6 часов будет " << ameba*pow(2,2) << " клеток" << endl;
+    cout << "Через 9 часов будет " << ameba*pow(2,3) << " клеток" << endl;
+    cout << "Через 24 часа будет " << ameba*pow(2,8) << " клеток" << endl;
+
+    return 0;
+}
