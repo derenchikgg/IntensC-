@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 20;
+    int arr[size];
+    int even_count = 0;
+    int odd_count = 0;
+
+    for (int i = 0; i < size; i++) {
+        cout << "Введите элемент массива: ";
+        cin >> arr[i];
+        if (arr[i] % 2 == 0) {
+            even_count++;
+        } else {
+            odd_count++;
+        }
+    }
+
+    if (even_count > odd_count) {
+        cout << "Четных элементов больше" << endl;
+    } else if (even_count < odd_count) {
+        cout << "Нечетных элементов больше" << endl;
+    } else {
+        cout << "Количество четных и нечетных элементов равно" << endl;
+    }
+
+    return 0;
+}
