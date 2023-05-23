@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int product = 1;
+
+    for (int i = 1; i <= 10; i++) {
+        int a;
+        cout << "Введите число a" << i << ": ";
+        cin >> a;
+        product *= a;
+    }
+
+    cout << "Произведение всех чисел равно: " << product << endl;
+
+    return 0;
+}
