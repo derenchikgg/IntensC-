@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 15;
+    int arr[size];
+    int pos_sum = 0;
+
+    for (int i = 0; i < size; i++) {
+        cout << "Введите элемент массива: ";
+        cin >> arr[i];
+        if (arr[i] > 0) {
+            pos_sum += arr[i];
+        }
+    }
+
+    int new_arr[size];
+    for (int i = 0; i < size; i++) {
+        new_arr[i] = arr[i] - pos_sum;
+    }
+
+    cout << "Новый массив: ";
+    for (int i = 0; i < size; i++) {
+        cout << new_arr[i] << " ";
+    }
+
+    return 0;
+}
