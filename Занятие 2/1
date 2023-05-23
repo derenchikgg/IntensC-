@@ -1,1 +1,18 @@
+#include <iostream>
+using namespace std;
 
+int main() 
+{
+    int a;
+    cout << "Введите число A: ";
+    cin >> a;
+
+    if (a > 0) 
+    {
+        cout << "Число A является положительным";
+    } else {
+        cout << "Число A не является положительным";
+    }
+
+    return 0;
+}
