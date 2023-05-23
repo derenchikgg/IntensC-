@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    cout << "Введите количество учебных заданий (10-40): ";
+    cin >> num;
+
+    string numString;
+    if (num < 10 || num > 40) {
+        cout << "Ошибка: неверное количество заданий";
+        return 1;
+    } else if (num % 10 == 0) {
+        switch (num) {
+            case 10:
+                numString = "десять учебных заданий";
+                break;
+            case 20:
+                numString = "двадцать учебных заданий";
+                break;
+            case 30:
+                numString = "тридцать учебных заданий";
+                break;
+            case 40:
+                numString = "сорок учебных заданий";
+                break;
+        }
+    } else {
+        string prefix, suffix;
+        switch (num / 10) {
+            case 2:
+                prefix = "двадцать ";
+                break;
+            case 3:
+                prefix = "тридцать ";
+                break;
+            case 4:
+                prefix = "сорок ";
+                break;
+        }
+        switch (num % 10) {
+            case 1:
+                suffix = "одно учебное задание";
+                break;
+            case 2:
+                suffix = "два учебных задания";
+                break;
+            case 3:
+                suffix = "три учебных задания";
+                break;
+            case 4:
+                suffix = "четыре учебных задания";
+                break;
+            case 5:
+                suffix = "пять учебных заданий";
+                break;
+            case 6:
+                suffix = "шесть учебных заданий";
+                break;
+            case 7:
+                suffix = "семь учебных заданий";
+                break;
+            case 8:
+                suffix = "восемь учебных заданий";
+                break;
+            case 9:
+                suffix = "девять учебных заданий";
+        break;
+        }
+        numString = prefix + suffix;
+    }
+
+    cout << "Количество учебных заданий: " << numString;
+
+    return 0;
+}
