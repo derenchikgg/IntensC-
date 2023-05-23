@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 12;
+    float arr[size];
+    float last_elem = arr[size - 1];
+    int count = 0;
+    float sum = 0;
+
+    for (int i = 0; i < size; i++) {
+        cout << "Введите элемент массива: ";
+        cin >> arr[i];
+        if (arr[i] < last_elem) {
+            count++;
+            sum += arr[i];
+        }
+    }
+
+    cout << "Количество элементов, меньших последнего элемента: " << count << endl;
+    cout << "Сумма элементов, меньших последнего элемента: " << sum << endl;
+
+    return 0;
+}
