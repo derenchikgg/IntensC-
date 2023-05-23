@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    float a, b;
+    cout << "Введите номер действия (1-4): ";
+    cin >> n;
+    cout << "Введите два числа: ";
+    cin >> a >> b;
+
+    float result;
+    switch (n) {
+        case 1:
+            result = a + b;
+            break;
+        case 2:
+            result = a - b;
+            break;
+        case 3:
+            result = a * b;
+            break;
+        case 4:
+            result = a / b;
+            break;
+        default:
+            cout << "Ошибка: неверный номер действия";
+            return 1;
+    }
+
+    cout << "Результат: " << result;
+
+    return 0;
+}
