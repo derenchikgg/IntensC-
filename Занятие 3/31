@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int jan_rain, mar_rain;
+    cout << "Введите количество осадков в январе: ";
+    cin >> jan_rain;
+    cout << "Введите количество осадков в марте: ";
+    cin >> mar_rain;
+
+    float avg_jan = float(jan_rain)/31;
+    float avg_mar = float(mar_rain)/31;
+    cout << "Среднедневное количество осадков в январе: " << avg_jan << endl;
+    cout << "Среднедневное количество осадков в марте: " << avg_mar << endl;
+
+    return 0;
+}
