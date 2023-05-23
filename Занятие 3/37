@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float deposit = 1000;
+    float growth_rate = 0.02;
+
+    for (int i = 1; i <= 10; i++) {
+        float growth = deposit*growth_rate;
+        deposit += growth;
+        cout << "Прирост суммы вклада за " << i << " месяц: " << growth << " руб." << endl;
+    }
+
+    for (int i = 3; i <= 12; i++) {
+        float growth = deposit*growth_rate;
+        deposit += growth;
+        cout << "Сумма вклада через " << i << " месяц: " << deposit << " руб." << endl;
+    }
+
+    return 0;
+}
