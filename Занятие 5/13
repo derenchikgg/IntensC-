@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+const int N = 10;
+
+double rms(int A[], int n) {
+    double sum = 0.0;
+    for (int i = 0; i < n; i++) {
+        sum += A[i] * A[i];
+    }
+    return sqrt(sum / n);
+}
+
+int main() {
+    int A[N] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    double rmsValue = rms(A, N);
+    cout << "Среднеквадратичное значение: " << rmsValue << endl;
+    return 0;
+}
