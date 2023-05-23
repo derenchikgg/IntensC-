@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 15;
+    float arr[size];
+    float first_elem;
+    int count = 0;
+
+    for (int i = 0; i < size; i++) {
+        cout << "Введите элемент массива: ";
+        cin >> arr[i];
+        if (i == 0) {
+            first_elem = arr[i];
+        } else {
+            if (arr[i] > first_elem) {
+                count++;
+            }
+        }
+    }
+
+    cout << "Количество элементов, больших первого элемента: " << count << endl;
+
+    return 0;
+}
