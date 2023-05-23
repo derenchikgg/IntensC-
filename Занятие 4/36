@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 12;
+    float arr[size];
+    float min_value = arr[0];
+    int min_index = 0;
+
+    for (int i = 0; i < size; i++) {
+        cout << "Введите элемент массива: ";
+        cin >> arr[i];
+        if (arr[i] < min_value) {
+            min_value = arr[i];
+            min_index = i;
+        }
+    }
+
+    arr[min_index] *= 3;
+    swap(arr[min_index], arr[size - 1]);
+
+    cout << "Новый массив: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
