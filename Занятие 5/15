@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+const int N = 3;
+
+double evaluateDerivative(double coeffs[], double x) {
+    double result = 0.0;
+    for (int i = N-1; i > 0; i--) {
+        result = result * x + coeffs[i] * i;
+    }
+    return result;
+}
+
+int main() {
+    double coeffs[N] = {1.0, 2.0, 3.0};
+    double x = 2.5;
+    double value = evaluateDerivative(coeffs, x);
+    cout << "Значение производной полинома: " << value << endl;
+    return 0;
+}
