@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, b;
+    cout << "Введите два числа: ";
+    cin >> a >> b;
+
+    if (a > b) {
+        float temp = a;
+        a = b;
+        b = temp;
+    }
+
+    cout << "Новые значения: " << a << " " << b;
+
+    return 0;
+}
