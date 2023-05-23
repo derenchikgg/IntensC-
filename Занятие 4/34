@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 19;
+    int arr[size];
+    int sum = 0;
+
+    for (int i = 0; i < size; i++) {
+        cout << "Введите элемент массива: ";
+        cin >> arr[i];
+        if (arr[i] < 0) {
+            break;
+        }
+        sum += arr[i];
+    }
+
+    if (sum == 0) {
+        cout << "В массиве нет отрицательных элементов" << endl;
+    } else {
+        cout << "Сумма элементов до первого отрицательного элемента: " << sum << endl;
+    }
+
+    return 0;
+}
