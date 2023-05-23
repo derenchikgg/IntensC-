@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 15;
+    float arr[size];
+    float pos_product = 1;
+    float neg_product = 1;
+
+    for (int i = 0; i < size; i++) {
+        cout << "Введите элемент массива: ";
+        cin >> arr[i];
+        if (arr[i] > 0) {
+            pos_product *= arr[i];
+        } else if (arr[i] < 0) {
+            neg_product *= abs(arr[i]);
+        }
+    }
+
+    float diff = pos_product - neg_product;
+    cout << "Разность между произведением всех положительных элементов и произведением модулей всех отрицательных: " << diff << endl;
+
+    return 0;
+}
