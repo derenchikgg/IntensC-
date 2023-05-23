@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float inner_diameter = 10;
+    float wall_thickness = 0.5;
+    float volume = 0;
+
+    for (int i = 1; i <= 12; i++) {
+        float outer_diameter = inner_diameter + 2*wall_thickness;
+        float radius = outer_diameter/2;
+        float height = outer_diameter;
+        float curr_volume = M_PI*pow(radius,2)*height;
+        volume += curr_volume;
+        inner_diameter = outer_diameter;
+    }
+
+    float total_volume = volume/1000; // переводим в литры
+    cout << "Суммарный объем вложенных друг в друга шаров: " << total_volume << " л" << endl;
+
+    return 0;
+}
