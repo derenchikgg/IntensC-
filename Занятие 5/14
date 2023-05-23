@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+const int N = 3;
+
+double evaluatePolynomial(double coeffs[], double x) {
+    double result = 0.0;
+    for (int i = N-1; i >= 0; i--) {
+        result = result * x + coeffs[i];
+    }
+    return result;
+}
+
+int main() {
+    double coeffs[N] = {1.0, 2.0, 3.0};
+    double x = 2.5;
+    double value = evaluatePolynomial(coeffs, x);
+    cout << "Значение полинома: " << value << endl;
+    return 0;
+}
