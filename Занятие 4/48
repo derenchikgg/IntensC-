@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 5;
+    float arr[size][size];
+    float min_value = arr[0][size - 1];
+
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            cout << "Введите элемент массива: ";
+            cin >> arr[i][j];
+            if (i + j == size - 1 && arr[i][j] < min_value) {
+                min_value = arr[i][j];
+            }
+        }
+    }
+
+    cout << "Наименьший элемент на побочной диагонали: " << min_value << endl;
+
+    return 0;
+}
