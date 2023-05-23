@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float price;
+    cout << "Введите цену 1 кг конфет: ";
+    cin >> price;
+
+    for (float i = 1.2; i <= 2; i += 0.2) {
+        cout << "Стоимость " << i << " кг конфет: " << price*i << endl;
+    }
+
+    return 0;
+}
