@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char direction;
+    int command;
+    cout << "Введите направление робота (С, З, Ю, В): ";
+    cin >> direction;
+    cout << "Введите команду (0, 1, -1): ";
+    cin >> command;
+
+    switch (direction) {
+        case 'С':
+            switch (command) {
+                case 0:
+                    break;
+                case 1:
+                    direction = 'З';
+                    break;
+                case -1:
+                    direction = 'В';
+                    break;
+                default:
+                    cout << "Ошибка: неверная команда";
+                    return 1;
+            }
+            break;
+        case 'З':
+            switch (command) {
+                case 0:
+            break;
+                case 1:
+                    direction = 'Ю';
+                    break;
+                case -1:
+                    direction = 'С';
+                    break;
+                default:
+                    cout << "Ошибка: неверная команда";
+                    return 1;
+            }
+            break;
+        case 'Ю':
+            switch (command) {
+                case 0:
+                    break;
+                case 1:
+                    direction = 'В';
+                    break;
+                case -1:
+                    direction = 'З';
+                    break;
+                default:
+                    cout << "Ошибка: неверная команда";
+                    return 1;
+            }
+            break;
+        case 'В':
+            switch (command) {
+                case 0:
+                    break;
+                case 1:
+                    direction = 'С';
+                    break;
+                case -1:
+                    direction = 'Ю';
+                    break;
+                default:
+                    cout << "Ошибка: неверная команда";
+                    return 1;
+            }
+            break;
+        default:
+            cout << "Ошибка: неверное направление";
+            return 1;
+    }
+
+    cout << "Направление робота: " << direction;
+
+    return 0;
+}
