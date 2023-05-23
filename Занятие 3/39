@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float area = 100;
+    float yield = 20;
+
+    for (int i = 2; i <= 8; i++) {
+        area *= 1.05;
+        yield *= 1.02;
+        cout << "Урожайность на " << i << "-й год: " << yield << " ц/га" << endl;
+    }
+
+    for (int i = 4; i <= 7; i++) {
+        float curr_area = 100*pow(1.05,i-1);
+        cout << "Площадь участка на " << i << "-й год: " << curr_area << " га" << endl;
+    }
+
+    float total_yield = yield*area;
+    for (int i = 2; i <= 6; i++) {
+        area *= 1.05;
+        yield *= 1.02;
+        total_yield += yield*area;
+    }
+    cout << "Урожай за первые шесть лет: " << total_yield << " ц" << endl;
+
+    return 0;
+}
