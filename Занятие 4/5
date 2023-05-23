@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cout << "Введите промежуток a-b: ";
+    cin >> a >> b;
+
+    int max_divisors = 0;
+    int max_divisors_num = 0;
+    for (int num = a; num <= b; num++) {
+        int count = 0;
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                count++;
+            }
+        }
+        if (count > max_divisors) {
+            max_divisors = count;
+            max_divisors_num = num;
+        } else if (count == max_divisors) {
+            max_divisors_num = max(max_divisors_num, num);
+        }
+    }
+
+    cout << "Число с максимальным количеством делителей: " << max_divisors_num << endl;
+
+    return 0;
+}
