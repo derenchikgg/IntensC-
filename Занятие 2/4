@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cout << "Введите число A: ";
+    cin >> a;
+    cout << "Введите число B: ";
+    cin >> b;
+
+    if (a > 2 && b <= 3) {
+        cout << "Справедливы неравенства A > 2 и B <= 3";
+    } else {
+        cout << "Неравенства A > 2 и B <= 3 не выполняются";
+    }
+
+    return 0;
+}
